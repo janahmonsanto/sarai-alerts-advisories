@@ -1,0 +1,30 @@
+<head>
+  <title>SARAI Alerts and Advisories</title>
+</head>
+  
+<body>
+  {{> mainLayout}}
+  {{> map}}
+</body>
+
+<template name="map">
+  <div class="map-container">
+    {{> googleMap name="map" options=mapOptions}}
+  </div>
+</template>
+
+<template name="mainLayout">
+  <div class="top">
+    <b>ENSO-Neutral Condition</b>
+    <div style="float:right">
+      <input type="text" placeholder="enter your email address" style="border: 1px solid #CCC; border-radius: 5px; padding: 5px 10px;">
+      <button>SUBSCRIBE</button>
+    </div>
+    <div class="bottom">
+      <img src="images/lady-logo.jpg" alt="SARAI Logo">
+      <button>MANAGE ALERTS</button>
+      <button>GET THE MOBILE APP</button>
+    </div>
+  </div>
+</template>
+
