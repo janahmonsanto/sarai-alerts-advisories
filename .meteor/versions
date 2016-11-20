@@ -4,6 +4,7 @@ autoupdate@1.2.11
 babel-compiler@6.13.0
 babel-runtime@0.1.13
 base64@1.0.10
+biasport:facebook-sdk@0.2.3_1
 binary-heap@1.0.10
 blaze@2.1.9
 blaze-html-templates@1.0.5

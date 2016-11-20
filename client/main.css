@@ -48,14 +48,17 @@
   padding: 10px 15px;
 }
 
-.panel.overlap.alert-section-layout{
+.overlap {
   position: relative;
+  opacity: 0.87 ;
+}
+
+.panel.overlap.alert-section-layout{
   top: 250px;
   left: 20px;
   background: #fff;
   min-width: 340px;
   max-width: 340px;
-  opacity: 0.87 ;
 }
 
 .panel.overlap.alert-section-layout .panel-body {
@@ -68,15 +71,4 @@
 
 .show-hide-alerts {
   padding: 2px 3px;
-}
-
-.panel.overlap.alert-preview-section {
-  position: relative;
-  top: 250px;
-  left: 100px;
-  background: #fff;
-  min-width: 340px;
-  max-width: 340px;
-  opacity: 0.87;
-  display: none;
 }

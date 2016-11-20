@@ -13,7 +13,7 @@
       {{> googleMap name="map" options=mapOptions}}
     </div>
     {{> alertSectionLayout}}
-    {{> alertPreviewSection}}
+    {{> alertDetailsSection}}
   </div>
 </template>
 
@@ -72,11 +72,32 @@
   </div>
 </template>
 
-<template name="alertPreviewSection">
-  <div class="panel overlap alert-preview-section">
-    <div class="panel-heading">
-      <label>Alerts</label>
+<template name="alertDetailsSection">  
+  <div id="markerModal" class="modal fade overlap" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <label></label>
+        </div>
+        <div class="modal-body">
+          <p></p>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
     </div>
+  </div>
+</template>
+
+<template name="alertPreviewSection">
+  <div id="alertPreviewId" class="alertPreview">
+      <img class="alertPreviewImage" src="">
+      <label class="alertPreviewTitle">
+        Hello
+      </label>
+      <text class="alertPreviewContent">
+       Hi
+      </text>
+      <div class="alertPreviewComment"></div>
   </div>
 </template>
 

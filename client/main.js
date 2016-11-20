@@ -18,16 +18,14 @@ Template.map.helpers({
   }
 });
 
-
-
 Template.map.onCreated(function() {
   GoogleMaps.ready('map', function(map) {
     google.maps.event.addListener(map.instance, 'click', function(event) {
-      Markers.insert({lat: event.latLng.lat(), lng: event.latLng.lng()});     
+      Markers.insert({lat: event.latLng.lat(), lng: event.latLng.lng()}); 
     });   
 
     var markers = {};
-
+    
     Markers.find().observe({
       added: function(document) {
         //create marker for the document
@@ -42,12 +40,49 @@ Template.map.onCreated(function() {
           id: document._id
         });
 
-        //click marker event
-        google.maps.event.addListener(marker, 'click .open-insert-alertPreviewSection', function(event) {
-           console.log("marker clicked");
-           
+        contentString =
+          '<div class="alertPreview">' + 
+            '<img class="alertPreviewImage" src="">' + 
+            '<label class="alertPreviewTitle">' + 
+              'Alert Title' + 
+            '</label>' +
+            '<text class="alertPreviewContent">' +
+              'This is where the content goes. Lorem ipsum blah blah blah.' +
+            '</text>' +
+            '<button type="button "class="btn btn-link alertDetailsButton">' + 
+              'More Details' + 
+            '</button>' +
+          '</div>';
+
+       var infowindow = new google.maps.InfoWindow({
+          content: contentString
         });
 
+        //show marker infowindow
+        google.maps.event.addListener(marker, 'click', function(event) {
+           console.log("marker clicked");
+           infowindow.open(map, marker);
+           //$('#markerModal').modal('show');
+           //$('[data-toggle="popover"]').popover('show'); 
+           //$('#markerPopover').popover('show');
+        });
+
+        var titleString = 'Type of Alert: Pest';
+
+        var infowindowtitle = new google.maps.InfoWindow({
+            content: titleString,
+            buttons: {close: {visible: false}}
+        });     
+        
+        //show marker infowindow title (hover)
+        google.maps.event.addListener(marker, 'mouseover', function(event) {
+            infowindowtitle.open(map, marker);
+        });
+
+        //hide marker infowindow title (mouse out)
+        google.maps.event.addListener(marker, 'mouseout', function(event) {
+          infowindowtitle.close();
+        });
       }
 
     });
