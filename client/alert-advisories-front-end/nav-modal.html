@@ -1,0 +1,60 @@
+<template name="navModal">
+    <!--<div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">
+                        <span class="glyphicon glyphicon-log-in"></span>
+                        Manage Alerts
+                    </h3>
+                </div>
+                <div class="modal-body">
+                    {{> loginButtons}}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    
+    <div id="subscribeModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                        SARAI Alerts and Advisories
+                    </h3>
+                </div>
+                <div class="modal-body">
+                    <p>Enter your email</p>
+                    <input class="form-control" type="email" id="emailID" placeholder="juandelacruz@example.com">
+                </div>
+                <div class="modal-footer">
+                    <button id="subscribeButton" type="button" class="btn btn-success" data-dismiss="modal">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="appModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">
+                        <span class="glyphicon glyphicon-phone"></span> 
+                        Get Mobile App
+                    </h3>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Scan the QR code below to download the app</p>
+                    <p class="text-center"><img id="qr-code-logo" src="images/qrcode.png" alt="Mobile App QR Code" height="200px"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

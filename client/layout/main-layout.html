@@ -1,0 +1,26 @@
+<template name="mainLayout"> 
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="http://www.sarai.ph">
+                    <img id="img-sarai-logo" src="images/lady-logo.jpg" alt="SARAI Logo">
+                </a> 
+            </div>
+            <div class="nav navbar-nav navbar-right">
+                 <ul class="nav navbar-nav navbar-right navbar-link-size">
+                    <li><a href="/manage-alerts"><span class="glyphicon glyphicon-log-in"></span>  Manage Alerts</a></li>
+                    <li><a data-toggle="modal" href="#subscribeModal"><span class="glyphicon glyphicon-envelope"></span>  Subscribe</a></li>
+                    <li><a data-toggle ="modal" href="#appModal"><span class="glyphicon glyphicon-phone"></span> Get Mobile App</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {{> navModal}}
+    {{> map}}
+    {{alertPreviewTemplate}}
+    
+</template>
+
+<body>
+    
+</body>

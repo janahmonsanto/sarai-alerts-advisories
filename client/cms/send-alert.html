@@ -1,0 +1,24 @@
+<template name="sendAlertTemplate">
+    <div class="panel">
+        <div class="panel-heading">
+            <h3>Send Alert</h3>
+        </div>
+        <div class="panel-body">
+            <form>
+                <div class="form-group">
+                    <label>To: </label> <input type="text" class="form-control" id="toSendAlert" placeholder="Enter recepient email">
+                    <br>
+                    <label>From: </label> <input type="text" class="form-control" id="fromSendAlert" placeholder="Enter your email">
+                    <br>
+                    <p>Subject: </p> <input type="text" class="form-control" id="subjectSendAlert" placeholder="Enter email subject"> 
+                    <br>
+                    <p>Message: </p> <textarea type="text" rows="5" class="form-control" id="messageSendAlert"></textarea>
+                </div>
+            </form>
+        </div>
+        <p class="text-right">
+            <button type="button" class="btn btn-success" id="sendButton">Send</button>
+            <a type="button" href="/manage-alerts" class="btn btn-default" id="nvmButton">Cancel</a>
+        </p>
+    </div>
+</template>

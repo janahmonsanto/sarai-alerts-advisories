@@ -1,0 +1,17 @@
+<template name="SideLayout">
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>{{> loginButtons}}</li>
+                <li><a href="/manage-alerts">Manage Alerts</a></li>
+                <li><a href="/send-alerts">Send Alerts</a></li>
+                <li><a href="/">Back to Map</a></li>
+            </ul>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                {{>yield}}
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,29 @@
+<template name="map">
+  <div id="content">
+    <div class="map-container">
+      {{> googleMap name="map" options=mapOptions}}
+    </div>
+    {{> alertIndex}}
+    <!--{{> cropFilter}}
+    {{> severityFilter}}
+    {{> typeFilter}}-->
+  </div>
+  
+  <div id="alertPreviewModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-title">
+                        <img class = "alertPreviewImage" src="">
+                        <h4 class="alertPreviewName">{{nameSession}}</h4>
+                        <h6 class = "alertPreviewLocation">{{municipalitySession}} {{provinceSession}}</h6>
+                    </div>
+                    <p>{{detailsSession}}</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="moreDetailsButton" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

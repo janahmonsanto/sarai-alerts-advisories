@@ -1,0 +1,17 @@
+<template name="listAlert">  
+  {{#each markers}}
+    <li id="list-alert" class="add-alert-view-list">
+      <div class="panel panel-default panel-add-alert-list">
+        <div class="panel-heading">
+          <button class="btn btn-danger btn-sm" id="deleteButton">X</button>&nbsp;
+          <a href="/edit-alerts" class="btn btn-default btn-sm" id="editButton">Edit</a>&nbsp;&nbsp;
+        </div>
+        <div class="panel-body">
+          <h4>{{alertName}} in {{alertProvince}}</h4>
+          <small>{{alertDetails}}</small>
+        </div>
+      </div>
+    </li>
+  {{/each}} 		
+	 
+</template>

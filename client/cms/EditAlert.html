@@ -1,0 +1,45 @@
+<template name="editAlertTemplate">
+    <form>
+        <div class="form-group">                            
+            <label>Alert Title </label><input type="text" class="form-control" id="alertTitle" value="{{alertName}}">
+            <label>Date</label><input type="date" class="form-control" id="dateRange">
+            <label>Longitude</label><input type="text" class="form-control" id="longitude">
+            <label>Latitude</label><input type="text" class="form-control" id="latitude">
+            <label>Details</label><textarea type="text" rows="5" class="form-control" id="details"></textarea>
+        </div>
+    <div id="crop-add-list">  
+        <label>Crops</label>   
+        <ul class="list-group">                   
+            <li class="list"><input type="checkbox" value="banana" id="addBanana">Banana</li>         
+            <li class="list"><input type="checkbox" value="cacao" id="addCacao">Cacao</li>
+            <li class="list"><input type="checkbox" value="coconut" id="addCoconut">Coconut</li>
+            <li class="list"><input type="checkbox" value="coffee" id="addCoffee">Coffee</li>
+            <li class="list"><input type="checkbox" value="corn" id="addCorn">Corn</li>
+            <li class="list"><input type="checkbox" value="rice" id="addRice">Rice</li>
+        </ul>
+    </div>
+
+   <div id="severity-add-list">  
+        <label>Severity</label>   
+        <ul class="list-group">                   
+            <li class="list"><input type="checkbox" value="high" id="addHigh">High</li>         
+            <li class="list"><input type="checkbox" value="medium" id="addMedium">Medium</li>
+            <li class="list"><input type="checkbox" value="low" id="addLow">Low</li>
+            <li class="list"><input type="checkbox" value="normal" id="addNormal">Normal</li>
+        </ul>
+    </div>
+
+    <div id="type-add-list">  
+        <label>Alert Type</label>   
+        <ul class="list-group">                   
+            <li class="list"><input type="checkbox" value="weather" id="addWeather">Weather</li>         
+            <li class="list"><input type="checkbox" value="pest" id="addPest">Pest</li>
+            <li class="list"><input type="checkbox" value="diseases" id="addDiseases">Diseases</li>
+        </ul>
+    </div>
+
+    <button type="button" class="btn btn-primary" id="saveButton" >Save</button>
+    <button type="button" class="btn btn-default" id="cancelButton">Cancel</button>
+    </form>
+
+</template>
